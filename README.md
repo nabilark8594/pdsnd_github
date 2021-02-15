@@ -1,15 +1,19 @@
 ### Date created
-Include the date you created this project and README file.
+15/02/2021
 
 ### Project Title
-Replace the Project Title
+Bikeshare Nabila's Python Project
 
 ### Description
-Describe what your project is about and what it does
+This was my submission for the udacity nanodegree program, python project.
+It simulates interaction with user and displays data according to the preference of the user interacting with it
 
 ### Files used
-Include the files used
+Bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+I have several references on other available repo on the variations of this project
 

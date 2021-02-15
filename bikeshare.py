@@ -39,7 +39,7 @@ def get_filters():
 def load_data(city, month, day):
 
     df = pd.read_csv(CITY_DATA[city])
-    
+
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
     df['month'] = df['Start Time'].dt.month
@@ -69,7 +69,7 @@ def time_stats(df):
     print('\nPlease wait while I\'m calculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    
+
     # TO DO: display the most common month
     common_month = df['month'].mode()[0]
     print("The most common month is: ", common_month)
@@ -77,12 +77,12 @@ def time_stats(df):
     # TO DO: display the most common day of week
     common_day = df['day_of_week'].mode()[0]
     print("The most common day of week is: ", common_day)
-    
+
     # TO DO: display the most common start hour
     common_hour = df['hour'].mode()[0]
     print("The most common start hour is: ", common_hour)
-    
-    
+
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -121,14 +121,14 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    #duration in minutes and seconds 
+    #duration in minutes and seconds
     minute, second = divmod(total_travel_time, 60)
-    #duration in hour and minutes 
+    #duration in hour and minutes
     hour, minute = divmod(minute, 60)
     print("The total trip duration is:\n")
     print("hours: ", hour)
     print("minutes: ", minute)
-    print("seconds: ", second)      
+    print("seconds: ", second)
 
     # TO DO: display mean travel time
     average_travel_time = round(df['Trip Duration'].mean())
@@ -174,9 +174,9 @@ def user_stats(df):
         earliest = int(df['Birth Year'].min())
         recent = int(df['Birth Year'].max())
         common_year = int(df['Birth Year'].mode()[0])
-        print("\nThe earliest year of birth: ", earliest)
-        print("\nThe most recent year of birth: ", recent)
-        print("The most common year of birth: ", common_year)
+        print('\nThe earliest year of birth: {}'.format(earliest))
+        print('\nThe most recent year of birth: {}'.format(recent))
+        print('\nThe most common year of birth: {}'.format(common_year))
     except:
         print("There are no birth year details in this file.")
 
@@ -187,7 +187,7 @@ def user_stats(df):
 
 def display_raw_data(df):
     option = input('Would you like to read some of the raw data? Enter Yes/No \n').lower()
-    
+
     if option == 'yes'or option =='y':
         option = True
     elif option =='no' or option =='n':
@@ -198,7 +198,7 @@ def display_raw_data(df):
         return
 
     raw_data = 0
-    
+
     while True:
         for i in range(raw_data ,raw_data+5):
             raw_data += 5
@@ -212,7 +212,7 @@ def display_raw_data(df):
         else:
             print('You did not enter a valid choice.')
             return
-    
+
 def main():
     while True:
         city, month, day = get_filters()

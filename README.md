@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+original date 31/01/2021    
 
 ### Project Title
-Replace the Project Title
+Bikeshare Project 
 
 ### Description
-Describe what your project is about and what it does
+Submission for the udacity nanodegree programme for the python part
 
 ### Files used
-Include the files used
+bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+https://www.geeksforgeeks.org/python-find-most-frequent-element-in-a-list/
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html
+https://www.geeksforgeeks.org/python-pandas-dataframe-idxmax/
+https://www.tutorialspoint.com/python_pandas/python_pandas_dataframe.htm

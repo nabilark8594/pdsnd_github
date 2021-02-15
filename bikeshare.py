@@ -107,7 +107,7 @@ def station_stats(df):
     df['Start To End'] = df['Start Station'].str.cat(df['End Station'], sep=' to ')
     combos = df['Start To End'].mode()[0]
 
-    print("\nThe most frequent combination of trips are from .", combos)
+    print("\nThe most frequent combination of trips are from ", combos)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -126,9 +126,7 @@ def trip_duration_stats(df):
     #duration in hour and minutes
     hour, minute = divmod(minute, 60)
     print("The total trip duration is:\n")
-    print("hours: ", hour)
-    print("minutes: ", minute)
-    print("seconds: ", second)
+    print('hours: {} \n minutes: {} \n seconds: {} '.format(hour, minutes, seconds))
 
     # TO DO: display mean travel time
     average_travel_time = round(df['Trip Duration'].mean())
@@ -174,9 +172,9 @@ def user_stats(df):
         earliest = int(df['Birth Year'].min())
         recent = int(df['Birth Year'].max())
         common_year = int(df['Birth Year'].mode()[0])
-        print("\nThe earliest year of birth: ", earliest)
-        print("\nThe most recent year of birth: ", recent)
-        print("The most common year of birth: ", common_year)
+        print('\nThe earliest year of birth: {}'.format(earliest))
+        print('\nThe most recent year of birth: {}'.format(recent))
+        print('\nThe most common year of birth: {}'.format(common_year))
     except:
         print("There are no birth year details in this file.")
 
@@ -186,9 +184,9 @@ def user_stats(df):
     print("Hey thanks for your patience!\n")
 
 def display_raw_data(df):
-    option = input('Would you like to view some of the raw data? Enter Yes/No \n').lower()
+    option = input('Would you like to read some of the raw data? Enter Yes/No \n').lower()
 
-    if option == 'yes':
+    if option == 'yes'or option =='y':
         option = True
     elif option =='no':
         option = False
